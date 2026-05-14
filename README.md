@@ -1,6 +1,8 @@
-# ComfyUI PNG to WebP converter — correct EXIF format for drag-and-drop workflow loading
+# ComfyUI PNG to WebP converter
 
-Finding a script that converts ComfyUI PNGs to WebP with working metadata is very difficult. There are a handful of attempts floating around GitHub but they all fail silently. You drag the WebP into ComfyUI and nothing loads or the WebP has been stripped of the proper metadata for ComfyUI to utilize for loading workflows. After a lot of digging it turns out ComfyUI's WebP parser is really specific about which EXIF fields the data goes in, how it's formatted, and what other fields are allowed nearby. Most scripts get at least one of those wrong.
+**Correct EXIF format for drag-and-drop workflow loading**
+
+Finding a script that converts ComfyUI PNGs to WebP with working metadata has proven very difficult. There are a handful of attempts floating around GitHub but they all fail silently. You drag the WebP into ComfyUI and nothing loads or the WebP has been stripped of the proper metadata for ComfyUI to utilize for loading workflows. After a lot of digging it turns out ComfyUI's WebP parser is really specific about which EXIF fields the data goes in, how it's formatted, and what other fields are allowed nearby. Most scripts get at least one of those wrong.
 
 This script is my attempt at getting it right. It reads the workflow and prompt data from the PNG, writes it to the correct EXIF fields, and verifies the metadata survived before doing anything permanent to your files. Runs on all your cores so it's reasonably fast on big folders too.
 
