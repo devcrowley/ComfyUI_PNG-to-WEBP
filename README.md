@@ -52,8 +52,6 @@ I initially created this script without any LLM help, but getting the EXIF data 
 becoming incredibly frustrating.  I worked with Claude Code to analyze the ComfyUI technical
 docs to figure out where I was making mistakes, and it found the issue.
 
-**What ComfyUI's pnginfo.ts actually requires**
-
 *TWO EXIF fields, both ASCII (type 2), written CONSECUTIVELY with nothing between them*
 
 Sure enough, after making some tweaks, that resolved it.
