@@ -8,7 +8,7 @@ This script is my attempt at getting it right. It reads the workflow and prompt 
 
 ## HOW TO USE:
 
-  This script will utilize every logical processor available for mass conversion of PNGs.  
+  This script will utilize every logical processor available for mass conversion of PNGs.
   You can lower the max number of threads at the end of the script. Search for `Entry point`
   to locate the max worker count.
 
@@ -53,6 +53,7 @@ becoming incredibly frustrating.  I worked with Claude Code to analyze the Comfy
 docs to figure out where I was making mistakes, and it found the issue.
 
 **What ComfyUI's pnginfo.ts actually requires**
+
 *TWO EXIF fields, both ASCII (type 2), written CONSECUTIVELY with nothing between them*
 
 Sure enough, after making some tweaks, that resolved it.
