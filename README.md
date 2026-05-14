@@ -2,9 +2,16 @@
 
 ## HOW TO USE:
 
+  This script will utilize every logical processor available for mass conversion of PNGs.  
+  You can lower the max number of threads at the end of the script. Search for `Entry point`
+  to locate the max worker count.
+
   Place this script in the directory containing your ComfyUI PNG outputs and run it.
-  Converted WebPs are saved to a "webp_out" subdirectory next to the script.
+  On startup it will ask whether to delete the original PNGs after conversion.
+  - Yes: WebP is saved alongside the PNG, then PNG is deleted after verified conversion
+  - No:  WebP is saved to a "webp_out" subdirectory (original PNGs untouched)
   Already-converted files are skipped (delete the webp to re-convert).
+  Conversion runs in parallel across all available logical CPU cores.
   
 ## REQUIREMENTS:
 
